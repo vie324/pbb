@@ -323,7 +323,7 @@
                     "血流やリンパの滞りを感じる", "肩首が詰まると頭痛やめまいがでる", "ストレス・緊張が抜けにくい",
                     "フェイシャルだけでなく全身の巡りを整えたい", "自分を労わる時間がほしい"
                 ],
-                "ホワイトスノーピール": [
+                "鍼": [
                     "毛穴のざらつき、ごわつき、詰まり、開き", "くすんで暗くみえる", "肌がザラザラする、角質が厚い",
                     "しみ、そばかすが気になる", "ニキビ跡の赤み、色素沈着", "ハリ、弾力の低下を感じる",
                     "肌の再生力が落ちたと感じる", "季節の変わり目に肌荒れしやすい", "ファンデーションでいつも隠している",
@@ -464,7 +464,7 @@
             ------------------------------------------------ */
             const symptomsContainer = document.getElementById('symptoms-container');
             const menuNames = Object.keys(symptomsData);
-            let userScores = { "小顔矯正": 0, "肌質ケアフェイシャル": 0, "機械小顔フェイシャル": 0, "ホワイトスノーピール": 0 };
+            let userScores = { "小顔矯正": 0, "肌質ケアフェイシャル": 0, "機械小顔フェイシャル": 0, "鍼": 0 };
             let totalChecks = 0;
 
             menuNames.forEach((category, index) => {
@@ -545,7 +545,7 @@
             }
 
             function updateDiagnosis() {
-                userScores = { "小顔矯正": 0, "肌質ケアフェイシャル": 0, "機械小顔フェイシャル": 0, "ホワイトスノーピール": 0 };
+                userScores = { "小顔矯正": 0, "肌質ケアフェイシャル": 0, "機械小顔フェイシャル": 0, "鍼": 0 };
                 totalChecks = 0;
 
                 const inputs = document.querySelectorAll('#symptoms-container input:checked');
@@ -592,7 +592,7 @@
                     recDesc = "肌のバリア機能低下や乾燥が目立ちます。まずは「肌質ケア」で潤いと土台作りを。";
                 } else if (topCategories.includes("機械小顔フェイシャル")) {
                     recDesc = "深部の凝りや血流不足、強いむくみがあります。機械の力で深部からほぐすケアが必要です。";
-                } else if (topCategories.includes("ホワイトスノーピール")) {
+                } else if (topCategories.includes("鍼")) {
                     recDesc = "ターンオーバーの乱れや角質肥厚が気になります。ピールケアで肌再生を促しましょう。";
                 }
 
